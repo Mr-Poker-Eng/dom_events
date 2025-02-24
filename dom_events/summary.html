@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event Summary</title>
+</head>
+<body>
+    <h1>DOM Event Summary</h1>
+
+    <input type="text" name="" id="name-input" placeholder="Your Name">
+    <button onclick="addName()">Add Name</button>
+    <button id="btn-add-name">Add Name 2</button>
+    <div id="name-container">
+
+    </div>
+
+    <script>
+        function addName(){
+            //console.log('button clicked');
+
+            const nameInput = document.getElementById('name-input');
+            //console.log(nameInput);
+            const newName = nameInput.value;
+            //console.log(newName);
+
+            //parent
+            const nameContainer = document.getElementById('name-container');
+
+
+            //create p
+            const p = document.createElement('p');
+            p.innerText = newName;
+            //console.log(p);
+
+            //append
+            nameContainer.appendChild(p);
+            //console.log(nameContainer);
+
+            nameInput.value = '';
+
+        }
+
+        // add Event Listener
+        document.getElementById('btn-add-name').addEventListener('click', function(){
+            
+        })
+    </script>
+</body>
+</html>

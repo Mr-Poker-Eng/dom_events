@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+</head>
+<body>
+    <h1>Dom Doma dom dom Events</h1>
+    <!-- option 1 for event handler -->
+    <button onclick="console.log(9)">click me</button>
+    <button onclick="console.log(63)">Another button</button>
+    <button id="" onclick="console.log('i am clicked')">third button</button>
+    <input type="text">
+
+    <br>
+    <!-- option 2 for click event handler  -->
+
+    <button onclick="makeYellowGreen()">Make YellowGreen</button>
+    <button onclick="makeGreen()">Make Green</button>
+    <br>
+
+    <!-- option 3: get element by id and then set onclick to a function -->
+    <button id="btn-make-blue">Make Blue</button>
+    <button id="btn-make-purple">Make Purple</button>
+    
+    <br>
+    <!-- option 5: addEventListener -->
+    <button id="btn-make-gray">Make Gray</button>
+    <button id="btn-make-gold">Make Gold</button>
+    <script>
+        //document.getElementById().addEventListener('event type', handler)
+        document.getElementById('btn-make-gray').addEventListener('mouseover', function makeGray(){
+            document.body.style.backgroundColor = 'gray';
+        })
+
+        document.getElementById('btn-make-gold').addEventListener('mouseout', function(){
+            document.body.style.backgroundColor = 'goldenrod'
+        })
+    </script>
+    <script src="js/events.js"></script>
+</body>
+</html>
